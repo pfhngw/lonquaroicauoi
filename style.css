@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    cursor: url("nhammat.png") 25 25, auto; /* Apply cursor globally */
+}
+#playPauseBtn {
+        cursor: url("domatto.png") 25 25, auto;
+        font-family: "SVN-Nusrat", sans-serif;
+        font-size: 20px;
+        padding: 5px 15px;
+        --glow-color: #fec2ce;
+        --glow-spread-color: #fe607f;
+        --enhanced-glow-color: #fee2e8;
+        --btn-color: #fd0738;
+        border: 0.25em solid var(--glow-color);
+        color: var(--glow-color);
+        background-color: var(--btn-color);
+        outline: none;
+        box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+        text-shadow: 0 0 0.5em var(--glow-color);
+        border-radius: 10px;
+        transition: all 0.3s;
+        position: absolute;
+        top: 30px; /* Adjust for spacing from the top */
+    	left: 50%; /* Move to the middle */
+    	transform: translateX(-50%); /* Center horizontally */
+    }
+#playPauseBtn: :after{
+	pointer-events: none;
+	content: "";
+	background-color: var(--glow-spread-color);
+	filter: blur(2em);
+	opacity: 0.7;
+	transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+#playPauseBtn:hover{
+	color: var(--btn-color);
+	background-color: var(--glow-color);
+	box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+}
+#playPauseBtn:active{
+	box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
+#cmsn{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 685vh;
+    gap: 30vh;
+}
+#cmsn button{
+	cursor: url("domatto.png") 25 25, auto;
+	font-family: "SVN-Nusrat", sans-serif;
+    font-size: 170px;
+    background-color: transparent;
+    border: none;
+    padding: 0 250px;
+    --glow-color: #fec2ce;
+    --glow-spread-color: #fe607f;
+    --enhanced-glow-color: #fee2e8;
+    --btn-color: #fd0738;
+    color: var(--glow-color);
+        outline: none;
+        text-shadow: 0 0 0.3em var(--btn-color);
+        transition: all 0.3s;
+}
+#cmsn button: :after{
+	pointer-events: none;
+	content: "";
+	filter: blur(2em);
+	opacity: 0.7;
+	transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+#cmsn button:hover{
+	color: var(--btn-color);
+	text-shadow: 0 0 0.3em var(--glow-color);
+}
+.spin3d{
+	animation: spin3d 3s ease-in-out infinite, blink 3s infinite alternate;
+	position: fixed;
+	top: 18vh;
+    left: 0.1vw;
+	transform-style: preserve-3d; /* Enable 3D effects */
+    perspective: 1000px; /* Add depth */
+}
+.spin3D{
+    animation: spin3D 3s ease-in-out infinite, blink 3s infinite alternate;
+    position: fixed;
+    top: 18vh;
+    right: 0.1vw;
+    transform-style: preserve-3d; /* Enable 3D effects */
+    perspective: 1000px; /* Add depth */
+}
+@keyframes spin3D{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+@keyframes spin3d {
+	from {transform: rotateY(0deg);}
+	to {transform: rotateY(-360deg);}
+}
+@keyframes blink {
+                50% {
+           opacity: 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lon quá rồi cậu ơi </title>
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-image: url(backgrounddd.png)">
+	<audio id="myAudio">
+    	<source src="troiiemlai.mp3">
+	</audio>
+	<button id="playPauseBtn" onclick="toggleAudio()">Ê</button>
+
+	<script>
+    function toggleAudio() {
+        let audio = document.getElementById("myAudio");
+        let button = document.getElementById("playPauseBtn");
+
+        if (audio.paused) {
+            audio.play();
+            button.innerHTML = "Ý là"; // Change to Pause icon
+        } else {
+            audio.pause();
+            button.innerHTML = "Ê"; // Change back to Play icon
+        }
+    }
+	</script>
+	<img src="nhp.png" class="spin3d">
+	<img src="gicungmoi.png" class="spin3D">
+	<div id="cmsn">
+		<button>Hân</button>
+		<button>Hoan</button>
+		<button>Ả</button>
+		<button>Ta</button>
+		<button>Bước</button>
+		<button>Sang</button>
+		<button>Đầu</button>
+		<button>Hai</button>
+	</div>
+	
+</body>
+</html>
